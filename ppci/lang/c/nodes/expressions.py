@@ -261,7 +261,7 @@ class StringLiteral(Literal):
 
     def to_bytes(self):
         """Convert this string literal to zero terminated byte string."""
-        encoding = "latin1"
+        encoding = "utf-8"
         data = self.value.encode(encoding) + bytes([0])
         return data
 
